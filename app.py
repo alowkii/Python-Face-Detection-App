@@ -5,7 +5,7 @@ import os
 import cv2 as cv
 import numpy as np
 import pickle
-from PIL import Image
+from PIL import Image 
 import pickle
 
 window = Tk()
@@ -56,7 +56,7 @@ def RecognizeMe():
             if conf >= 45 and  conf <= 85:
                 cv.putText(frame, labels[id_], (x,y), cv.FONT_HERSHEY_PLAIN, 2, (255,255,255), 2, cv.LINE_AA)
                 
-            cv.imwrite("Unrecognized/"+generate_file_name("Image"), roi_color)
+            cv.imwrite("U   nrecognized/"+generate_file_name("Image"), roi_color)
             rect = cv.rectangle(frame, (x, y), (x+w, y+h),
                                 (0, 255, 0), thickness=2)
         
